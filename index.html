@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+        .button {
+            justify-content: baseline;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            margin-top: 250px;
+
+        }
+
+        .container {
+
+            justify-content: center;
+            margin-top: 200px;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 10px;
+
+
+        }
+
+        .abrirModal {
+            display: flex;
+            background-color: #008CBA;
+            justify-content: center;
+            height: 48px;
+            width: 164px;
+            border-radius: 5px;
+
+        }
+
+        .abrirModal a {
+            text-decoration: none;
+            margin-top: 10px;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.01em;
+            font-size: 20px;
+            color: #ffff;
+            text-decoration: none;
+            justify-content: center;
+        }
+
+
+
+
+        .button1 {
+            background-color: #008CBA;
+            justify-content: baseline;
+            height: 48px;
+            width: 164px;
+            left: 1695px;
+            border-radius: 5px;
+        }
+
+        .button2 {
+            background-color: #6C757E;
+            justify-content: baseline;
+            height: 48px;
+            width: 164px;
+            left: 1695px;
+            border-radius: 5px;
+        }
+
+        .Modal {
+
+            display: none;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 654px;
+            height: 312px;
+            background-color: #212429;
+            border: 1px solid #FFFFFF;
+            z-index: 10px;
+            transition: all .4s;
+        }
+
+        .container:target {
+            display: flex;
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+        h2 {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.01em;
+            font-size: 20px;
+            font-weight: normal;
+            color: #ffff;
+
+
+        }
+
+        .text {
+            position: absolute;
+            width: 654px;
+            height: 190px;
+            background: #4C5157;
+            color: #ffff;
+            text-align: center;
+
+
+        }
+
+
+
+        .erro {
+            float: center;
+
+
+        }
+
+
+
+        .fechar {
+
+            color: #4C5157;
+            font-size: 30px;
+            text-decoration: none;
+            float: right;
+            cursor: pointer;
+            margin-top: -145px;
+            margin-left: 205px;
+            margin-right: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="abrirModal">
+        <a href="#cont1">
+            Salvar
+        </a>
+    </div>
+    <div class="container" id="cont1">
+        <div id="modal" class="Modal">
+            <div class="text">
+                <h2> Opa! Ocorreu um erro na sua tentativa de cadastro.
+                    <br>Tente novamente mais tarde.
+                </h2>
+                <a href="#" class="fechar">&times;</a>
+                <div class="erro">
+                    <img src="https://img.icons8.com/material-rounded/96/000000/error--v1.png" />
+                </div>
+
+            </div>
+            <a href="#"><button class="button button1">Confirmar</button> </a>
+            <a href="#"><button class="button button2">Voltar</button></a>
+        </div>
+    </div>
+
+</body>
+
+</html>
